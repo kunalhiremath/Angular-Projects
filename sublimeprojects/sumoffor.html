@@ -1,0 +1,20 @@
+Enter value of n <input type="text" name="n" #n>
+<div>{{msg}}</div>
+<button (click)="onClick(n.value)"></button>
+
+<script type="text/javascript">
+	
+	  msg:number;
+      onClick(n){
+      n:parseInt(n);
+      let sm=1,i=-1,c,f=1;
+      for(c=2;c<=n;c++){
+      f=f*c;
+      sm=sm+(i*c*c/f);
+      i=i*-1;
+    }
+    this.msg=sm;
+  }
+
+}
+</script>
